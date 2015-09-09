@@ -1,5 +1,5 @@
 --[[
-@brief 计算Utf-8字符串的长度
+@brief 获取utf-8字符串的长度
 utf-8
 0xxxxxxx
 110xxxxx 10xxxxxx
