@@ -39,3 +39,29 @@ function getUtf8len(str)
 	end
 	return cnt
 end
+
+--[[
+四舍五入
+-1.4 => -1
+-1.6 => -2
+ 1.4 => 1
+ 1.6 => 2
+]]
+function toRound(n)
+	return math.floor(n + 0.5)
+end
+
+--[[
+克隆table
+]]
+function cloneTable(t)
+	local newT = {}
+	for k, v in pairs(t) do
+		if "type" == type(v) then
+			newT[k] = cloneTable(v)
+		else
+			newT[k] = v
+		end
+	end
+	return newT
+end
