@@ -41,7 +41,7 @@ function getUtf8len(str)
 end
 
 --[[
-四舍五入
+@brief 四舍五入
 -1.4 => -1
 -1.6 => -2
  1.4 => 1
@@ -52,7 +52,7 @@ function toRound(n)
 end
 
 --[[
-克隆table
+@brief 克隆table
 ]]
 function cloneTable(t)
 	local newT = {}
@@ -65,7 +65,6 @@ function cloneTable(t)
 	end
 	return newT
 end
-
 
 --[[
 打印table
@@ -97,7 +96,6 @@ info={
   func=function: 0051AFD0,
   nickName="eee",
 },
-
 ]]
 function printTable(t, offset)
 	for k, v in pairs(t) do
