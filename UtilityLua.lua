@@ -81,9 +81,7 @@ local t = {
 		end
 	}
 }
-
 ==>
-
 printTable(t, “”)
 
 name=1,
