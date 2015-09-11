@@ -65,3 +65,52 @@ function cloneTable(t)
 	end
 	return newT
 end
+
+
+--[[
+打印table
+
+local t = {
+	name = 1,
+	info = {
+		age=2,
+		level={1, 2, 3},
+		nickName="eee",
+		args={},
+		func=function()
+		end
+	}
+}
+
+==>
+
+printTable(t, “”)
+
+name=1,
+info={
+  args={
+  },
+  age=2,
+  level={
+    1=1,
+    2=2,
+    3=3,
+  },
+  func=function: 0051AFD0,
+  nickName="eee",
+},
+
+]]
+function printTable(t, offset)
+	for k, v in pairs(t) do
+		if "table" == type(v) then
+			print(offset..k.."={")
+			printTable(v, offset.."  ")
+			print(offset.."},")
+		elseif "string" == type(v) then
+			print(offset..k..'="'..v..'",')
+		else
+			print(offset..k.."="..tostring(v)..",")
+		end
+	end
+end
