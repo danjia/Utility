@@ -110,3 +110,16 @@ function printTable(t, offset)
 		end
 	end
 end
+
+--[[
+@brief 检测文件是否存在
+@example isFileExist("fileName.lua")
+]]
+function isFileExist(filePath)
+	local f = io.open(filePath, "r")
+	if f then
+		io.close(f)
+		return true
+	end
+	return false
+end
