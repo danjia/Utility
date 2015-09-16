@@ -52,6 +52,14 @@ function toRound(n)
 end
 
 --[[
+@brief 将number转为整数(即将小数部分截断)
+]]
+function toint(n)
+	local a = math.modf(n)
+	return a
+end
+
+--[[
 @brief 克隆table
 ]]
 function cloneTable(t)
@@ -123,3 +131,13 @@ function isFileExist(filePath)
 	end
 	return false
 end
+
+
+
+--math.randomseed(os.time())
+function toint(n)
+	local a = math.modf(n)
+	return a
+end
+
+print(toint(5.6))
